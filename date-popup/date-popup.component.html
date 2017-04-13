@@ -1,0 +1,10 @@
+<div #dpdown class="input-group" dropdown dropdown-append-to-body [autoClose]="false">
+                            <input type="text" class="form-control " name="{{name}}" placeholder="{{placeholder}}" value="{{dt | date:'dd/MM/yyyy'}}"/>
+                            <span class="input-group-addon" dropdownToggle><i class="glyphicon glyphicon-calendar"></i></span>
+                            <div class="dropdown-menu" role="menu" aria-labelledby="btn-append-to-body">
+                                <datepicker name="{{name}}" [showWeeks]="false" [(ngModel)]="dt" (selectionDone)="selected($event)" (activeDateChange)="changed($event)"></datepicker>
+                                <a href="#" class="btn btn-link  pull-right" (click)="hide()">chiudi</a>
+                             </div>   
+                        </div>
+
+                        {{date}}
